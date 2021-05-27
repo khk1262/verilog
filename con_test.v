@@ -1,30 +1,4 @@
-`define memory 524288
-`define address 18	
-
-module sram(clk, csn, wen, a, din, dout);
-	input clk, csn, wen;
-	input [`address:0] a;
-	input [15:0] din;
-	output [15:0] dout;
-
-	reg[15:0] data[0:`memory];
-	reg[`address:0] a_reg;
-
-	initial begin
-		$readmemh("img.dat", data);
-	end
-
-	always@(posedge clk) begin
-		if(csn==1'b0) begin
-			if(wen==1'b1) data[a] <= din;
-			a_reg<=a;
-		end
-		if(csn==1'b1 && wen == 1'b1)
-			$writememh("img2.dat", data);
-	end
-	assign dout = data[a_reg];
-endmodule
-				
+`include "sram.v"				
 
 module counter_sram(rst, clk, result, i_en, o_en);
 	input clk, rst;
@@ -39,6 +13,8 @@ module counter_sram(rst, clk, result, i_en, o_en);
 	wire o_r_en;
 	
 	reg[18:0] din_ad;
+
+	reg store;
 
 	parameter QD = 4'b0010, OC = 4'b0011, HX = 4'b0100;
 	reg[4:0] mul;
@@ -117,10 +93,17 @@ module counter_sram(rst, clk, result, i_en, o_en);
 					state <= 1'b1;
 				else
 					state <= 1'b0;
+				if(y == 510 && x == 510 && count == 4'b1010) begin
+					store <= 1'b1;
+				end
+				else begin
+					store <= 1'b0;
+				end
 			end
 			else begin
 				if(y == 510 && x == 510) begin
 					state <= 1'b0;
+						
 				end
 				else begin
 					state <= state;
@@ -163,5 +146,5 @@ module counter_sram(rst, clk, result, i_en, o_en);
 			sum_flip <= temp_flip;
 		end
 	end	
-	sram u0(clk, csn, wen, ad, din, dout);
+	sram u0(clk, csn, wen, ad, din, dout, store);
 endmodule

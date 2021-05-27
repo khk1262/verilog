@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/khk1262/test/simv.daidir
+pDaiDir                            	/home/khk1262/verilog/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
