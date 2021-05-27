@@ -1,0 +1,3321 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/khk1262/test/con_test.vpd -design V2} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V1} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V3} {gui_open_db -file /home/khk1262/test/mem_test2.vpd -design V1} {gui_open_db -file /home/khk1262/test/cnn.vpd -design V2}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1319
+gui_set_state_value -category Layout -key child_console_size_y -value 148
+gui_set_state_value -category Layout -key child_data_coltype -value 55
+gui_set_state_value -category Layout -key child_data_colvalue -value 115
+gui_set_state_value -category Layout -key child_data_colvariable -value 155
+gui_set_state_value -category Layout -key child_data_size_x -value 311
+gui_set_state_value -category Layout -key child_data_size_y -value 473
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 143
+gui_set_state_value -category Layout -key child_hier_size_y -value 473
+gui_set_state_value -category Layout -key child_hier_sort_order -value 1
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 869
+gui_set_state_value -category Layout -key child_source_size_y -value 468
+gui_set_state_value -category Layout -key child_wave_colname -value 144
+gui_set_state_value -category Layout -key child_wave_colvalue -value 99
+gui_set_state_value -category Layout -key child_wave_left -value 247
+gui_set_state_value -category Layout -key child_wave_right -value 2146
+gui_set_state_value -category Layout -key main_pos_x -value 1148
+gui_set_state_value -category Layout -key main_pos_y -value 311
+gui_set_state_value -category Layout -key main_size_x -value 2467
+gui_set_state_value -category Layout -key main_size_y -value 1027
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 2403
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 922
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value {-139}
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 125
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 2259
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1124
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value /home/khk1262/test
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value simv
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/khk1262/test/con_test.vpd -design V1
+gui_list_select -id Data.1 -selected  { top.rst   }
+gui_list_show_data -select -id  Data.1   top.rst
+gui_list_select -id Data.1 -selected  { top.rst  top.clk  top.i_en  top.o_en  {top.result[19:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { {top.result[19:0]}   }
+gui_list_select -id Wave.1 -selected  { top.o_en   }
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
+gui_list_select -id Data.1 -selected  { {top.u0.din[15:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.result[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.count[3:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.count[3:0]}  {top.u0.sum[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.count[3:0]}  {top.u0.sum[19:0]}  {top.u0.sum_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.count[3:0]}  {top.u0.sum[19:0]}  {top.u0.sum_flip[19:0]}  {top.u0.temp_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.count[3:0]}  {top.u0.sum[19:0]}  {top.u0.sum_flip[19:0]}  {top.u0.temp_flip[19:0]}  {top.u0.ad[18:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.dout[15:0]} {top.u0.count[3:0]} {top.u0.ad[18:0]} {top.u0.sum[19:0]} {top.u0.temp_flip[19:0]} {top.u0.sum_flip[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 207
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Data.1 -selected  { {top.u0.val_x[7:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.val_x[7:0]}  {top.u0.val_y[7:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.val_x[7:0]} {top.u0.val_y[7:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 58
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_list_select -id Data.1 -selected  { {top.u0.x[8:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.x[8:0]}  {top.u0.y[8:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.x[8:0]} {top.u0.y[8:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 2849
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 2810
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 2846
+gui_list_select -id Wave.1 -selected  { {top.u0.sum[19:0]}   }
+gui_list_select -id Wave.1 -selected  { {top.u0.val_x[7:0]}   }
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 100
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 558
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Data.1 -selected  { {top.u0.val_x[7:0]}   }
+gui_list_select -id Data.1 -selected  { top.u0.state   }
+gui_list_add -id Wave.1 -from Data.1 { top.u0.state } -insertionbar
+gui_marker_move -id  Wave.1 C1 39
+gui_marker_move -id  Wave.1 C1 90
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 176
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 78
+gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Data.1 -selected  { V2:top.rst  V2:top.clk  V2:top.i_en  V2:top.o_en  {V2:top.din[15:0]}  {V2:top.dout[15:0]}  {V2:top.result[19:0]}   }
+gui_list_create_group_when_add -wave -enable
+gui_list_add -id Wave.1 -from Data.1 { V2:top.rst V2:top.clk V2:top.i_en V2:top.o_en {V2:top.din[15:0]} {V2:top.dout[15:0]} {V2:top.result[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 30
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 115
+gui_marker_move -id  Wave.1 C1 224
+gui_marker_move -id  Wave.1 C1 224
+gui_marker_move -id  Wave.1 C1 225
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 226
+gui_marker_move -id  Wave.1 C1 224
+gui_marker_move -id  Wave.1 C1 225
+gui_list_expand -id Hier.1   V2:top
+gui_list_action -id  Hier.1 V2:top
+gui_list_select -id Hier.1 -current_item_name V2:top.u0 -current_item_type Scope  -selected  { V2:top.u0   }
+gui_list_select -id Data.1 -selected  { {V2:top.u0.ad[18:0]}   }
+gui_list_select -id Data.1 -selected  { {V2:top.u0.sum[19:0]}   }
+gui_list_select -id Data.1 -selected  { {V2:top.u0.sum[19:0]}  {V2:top.u0.temp_flip[19:0]}  {V2:top.u0.sum_flip[19:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {V2:top.u0.sum[19:0]} {V2:top.u0.temp_flip[19:0]} {V2:top.u0.sum_flip[19:0]} } -insertionbar
+gui_list_select -id Data.1 -selected  { {V2:top.u0.ad[18:0]}   }
+gui_list_create_group_when_add -wave -disable
+gui_list_add -id Wave.1 -from Data.1 { {V2:top.u0.ad[18:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 213
+gui_marker_move -id  Wave.1 C1 116
+gui_marker_move -id  Wave.1 C1 115
+gui_marker_move -id  Wave.1 C1 155
+gui_marker_move -id  Wave.1 C1 165
+gui_marker_move -id  Wave.1 C1 175
+gui_marker_move -id  Wave.1 C1 185
+gui_marker_move -id  Wave.1 C1 195
+gui_marker_move -id  Wave.1 C1 205
+gui_marker_move -id  Wave.1 C1 138
+gui_marker_move -id  Wave.1 C1 140
+gui_marker_move -id  Wave.1 C1 135
+gui_marker_move -id  Wave.1 C1 145
+gui_marker_move -id  Wave.1 C1 140
+gui_marker_move -id  Wave.1 C1 141
+gui_marker_move -id  Wave.1 C1 140
+gui_marker_move -id  Wave.1 C1 245
+gui_wv_zoom_timerange -id  Wave.1 270 278
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {V1:top.u0.dout[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {V1:top.u0.ad[18:0]}   }
+gui_list_select -id Wave.1 -selected  { {V2:top.u0.ad[18:0]}   }
+gui_marker_move -id  Wave.1 C1 105
+gui_open_db -file /home/khk1262/test/con_test.vpd -design V3
+gui_close_window -window  Source.1
+gui_list_select -id Hier.1 -current_item_name V2:top -current_item_type Scope  -selected  { V2:top   }
+gui_list_select -id Hier.1 -current_item_name V2:top.u0 -current_item_type Scope  -selected  { V2:top.u0   }
+gui_close_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_expand -id Hier.1   top
+gui_list_action -id  Hier.1 top
+gui_list_expand -id  Hier.1   top.u0
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
+gui_list_select -id Data.1 -selected  { {top.u0.din[15:0]}   }
+gui_list_create_group_when_add -wave -enable
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.din[15:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 43
+gui_marker_move -id  Wave.1 C1 115
+gui_marker_move -id  Wave.1 C1 121
+gui_marker_move -id  Wave.1 C1 125
+gui_marker_move -id  Wave.1 C1 135
+gui_marker_move -id  Wave.1 C1 145
+gui_marker_move -id  Wave.1 C1 135
+gui_marker_move -id  Wave.1 C1 145
+gui_marker_move -id  Wave.1 C1 115
+gui_wv_zoom_timerange -id  Wave.1 0 276
+gui_wv_zoom_timerange -id  Wave.1 0 276
+gui_wv_zoom_timerange -id  Wave.1 0 325
+gui_marker_move -id  Wave.1 C1 103
+gui_marker_move -id  Wave.1 C1 123
+gui_marker_move -id  Wave.1 C1 115
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 10
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 304459651
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 151995487
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 50000027
+gui_wv_scroll_hslidermove -id  Wave.1 155465699
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 155465699
+gui_wv_scroll_hslidermove -id  Wave.1 413863357
+gui_wv_scroll_hslidermove -id  Wave.1 383111900
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 126022067
+gui_wv_scroll_hslidermove -id  Wave.1 413863357
+gui_wv_scroll_hslidermove -id  Wave.1 174685359
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 57463793
+gui_wv_scroll_hslidermove -id  Wave.1 150708935
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 152511674
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 21239
+gui_wv_scroll_hslidermove -id  Wave.1 14048
+gui_wv_scroll_hslidermove -id  Wave.1 9581
+gui_wv_scroll_hslidermove -id  Wave.1 4232
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 17886205
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 86422405
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 87125026
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 86656612
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 86578543
+gui_wv_scroll_hslidermove -id  Wave.1 86032060
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 87046957
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 86422405
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28564265
+gui_list_select -id Wave.1 -selected  { {top.u0.val_x[7:0]}   }
+gui_marker_move -id  Wave.1 C1 28564245
+gui_marker_move -id  Wave.1 C1 28564265
+gui_marker_move -id  Wave.1 C1 28564265
+gui_marker_move -id  Wave.1 C1 28564275
+gui_marker_move -id  Wave.1 C1 28564275
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 86656612
+gui_marker_move -id  Wave.1 C1 28637566
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 86578543
+gui_wv_scroll_hslidermove -id  Wave.1 86656612
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { top.u0.state   }
+gui_list_select -id Wave.1 -selected  { {top.u0.y[8:0]}   }
+gui_list_select -id Wave.1 -selected  { {top.u0.x[8:0]}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 28635266
+gui_wv_scroll_hslidermove -id  Wave.1 50836079
+gui_marker_move -id  Wave.1 C1 16800341
+gui_list_select -id Data.1 -selected  { top.u0.csn   }
+gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn   }
+gui_list_create_group_when_add -wave -disable
+gui_list_add -id Wave.1 -from Data.1 { top.u0.wen top.u0.csn } -insertionbar
+gui_list_select -id Wave.1 -selected  { {top.u0.din[15:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 50970211
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 16873423
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 16873354
+gui_marker_move -id  Wave.1 C1 16873354
+gui_marker_move -id  Wave.1 C1 16873354
+gui_marker_move -id  Wave.1 C1 16873355
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 199953953
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  {  }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 16873381
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 268961
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 274334
+gui_wv_scroll_hslidermove -id  Wave.1 288663
+gui_wv_scroll_hslidermove -id  Wave.1 288663
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_close_window -window TopLevel.2
+gui_open_db -file /home/khk1262/test/con_test.vpd -design V2
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_select -id Data.1 -selected  { top.rst  top.clk  top.i_en  top.o_en  {top.result[19:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 39787281
+gui_close_window -window TopLevel.2
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 75906890
+gui_zoom -window  Wave.1  -full
+gui_zoom -window  Wave.1  -full
+gui_close_window -window TopLevel.2
+gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Data.1 -selected  { V2:top.rst  V2:top.clk  V2:top.i_en  V2:top.o_en  {V2:top.din[15:0]}  {V2:top.dout[15:0]}  {V2:top.result[19:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { V2:top.rst V2:top.clk V2:top.i_en V2:top.o_en {V2:top.din[15:0]} {V2:top.dout[15:0]} {V2:top.result[19:0]} } -insertionbar
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 77249620
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 77800747
+gui_close_window -window TopLevel.2
+gui_close_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 75906891
+gui_link_wave_window -link -id Wave.1
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 75907731
+gui_close_window -window TopLevel.2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Data.1 -selected  { top.rst  top.clk  top.i_en  top.o_en  {top.result[19:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Data.1 -selected  {  }
+gui_list_expand -id Hier.1   top
+gui_list_action -id  Hier.1 top
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
+gui_list_select -id Data.1 -selected  { {top.u0.din[15:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}   }
+gui_list_select -id Data.1 { {top.u0.result[19:0]}  top.u0.o_en  {top.u0.temp_sum[18:0]}  top.u0.o_r_en  {top.u0.din_ad[18:0]}  {top.u0.mul[4:0]}  {top.u0.x[8:0]}  {top.u0.y[8:0]}  {top.u0.count[3:0]}  {top.u0.next[3:0]}  top.u0.state  {top.u0.val_x[7:0]}  {top.u0.val_y[7:0]}  {top.u0.ad[18:0]}  {top.u0.sum[19:0]}  {top.u0.temp_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.sum_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.sum_flip[19:0]}  {top.u0.temp_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.sum_flip[19:0]}  {top.u0.temp_flip[19:0]}  {top.u0.sum[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}  {top.u0.sum_flip[19:0]}  {top.u0.temp_flip[19:0]}  {top.u0.sum[19:0]}  {top.u0.ad[18:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.dout[15:0]} {top.u0.ad[18:0]} {top.u0.sum[19:0]} {top.u0.temp_flip[19:0]} {top.u0.sum_flip[19:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 86120389
+gui_wv_scroll_hslidermove -id  Wave.1 86212300
+gui_list_select -id Data.1 -selected  { {top.u0.x[8:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.x[8:0]}  {top.u0.y[8:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.x[8:0]} {top.u0.y[8:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 86212300
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 367643
+gui_marker_move -id  Wave.1 C1 122614
+gui_marker_move -id  Wave.1 C1 122765
+gui_list_select -id Data.1 -selected  { top.u0.wen   }
+gui_list_add -id Wave.1 -from Data.1 { top.u0.wen } -insertionbar
+gui_marker_move -id  Wave.1 C1 122565
+gui_list_select -id Wave.1 -selected  { top.o_en   }
+gui_list_select -id Data.1 -selected  { top.u0.o_r_en   }
+gui_list_add -id Wave.1 -from Data.1 { top.u0.o_r_en } -insertionbar
+gui_zoom -window Wave.1 -factor 2
+gui_list_select -id Data.1 -selected  { {top.u0.count[3:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.count[3:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 122654
+gui_marker_move -id  Wave.1 C1 122655
+gui_marker_move -id  Wave.1 C1 122665
+gui_list_select -id Wave.1 -selected  { top.u0.wen   }
+gui_marker_move -id  Wave.1 C1 122661
+gui_marker_move -id  Wave.1 C1 122665
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 103
+gui_list_select -id Wave.1 -selected  { {top.u0.ad[18:0]}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 135
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 103
+gui_marker_move -id  Wave.1 C1 125
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 49
+gui_marker_move -id  Wave.1 C1 129
+gui_list_select -id Wave.1 -selected  { top.u0.wen   }
+gui_list_select -id Wave.1 -selected  { top.u0.o_r_en   }
+gui_marker_move -id  Wave.1 C1 99
+gui_list_select -id Wave.1 -selected  { {top.u0.count[3:0]}   }
+gui_list_select -id Wave.1 -selected  { top.u0.o_r_en   }
+gui_list_select -id Wave.1 -selected  { top.u0.wen   }
+gui_list_select -id Wave.1 -selected  { top.o_en   }
+gui_list_select -id Wave.1 -selected  { {top.u0.sum_flip[19:0]}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Data.1 -selected  { V2:top.rst  V2:top.clk  V2:top.i_en  V2:top.o_en  {V2:top.din[15:0]}  {V2:top.dout[15:0]}  {V2:top.result[19:0]}   }
+gui_list_create_group_when_add -wave -enable
+gui_list_add -id Wave.1 -from Data.1 { V2:top.rst V2:top.clk V2:top.i_en V2:top.o_en {V2:top.din[15:0]} {V2:top.dout[15:0]} {V2:top.result[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 217
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 194589196
+gui_wv_scroll_hslidermove -id  Wave.1 168045985
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 168961268
+gui_marker_move -id  Wave.1 C1 28278118
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 28167622
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_list_select -id Wave.1 -selected  { Group10   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 17102875
+gui_marker_move -id  Wave.1 C1 45799633
+gui_wv_scroll_hslidermove -id  Wave.1 10709277
+gui_marker_move -id  Wave.1 C1 28737352
+gui_marker_select -id  Wave.1 { C1 }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 9898660
+gui_wv_zoom_timerange -id  Wave.1 26560122 26564928
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 62
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V3
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Data.1 -selected  { V2:top.rst  V2:top.clk  V2:top.i_en  V2:top.o_en  {V2:top.din[15:0]}  {V2:top.dout[15:0]}  {V2:top.result[19:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { V2:top.rst V2:top.clk V2:top.i_en V2:top.o_en {V2:top.din[15:0]} {V2:top.dout[15:0]} {V2:top.result[19:0]} } -insertionbar
+gui_list_expand -id Hier.1   V2:top
+gui_list_action -id  Hier.1 V2:top
+gui_list_select -id Hier.1 -current_item_name V2:top.u0 -current_item_type Scope  -selected  { V2:top.u0   }
+gui_marker_move -id  Wave.1 C1 135
+gui_wv_scroll_hslidermove -id  Wave.1 177993951
+gui_wv_scroll_hslidermove -id  Wave.1 139743102
+gui_wv_scroll_hslidermove -id  Wave.1 170004
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_list_select -id Wave.1 -selected  {  }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {V2:top.dout[15:0]}   }
+gui_list_select -id Wave.1 -selected  { {V1:top.u0.dout[15:0]}   }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { Group10   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 115
+gui_marker_move -id  Wave.1 C1 85
+gui_marker_move -id  Wave.1 C1 115
+gui_marker_move -id  Wave.1 C1 103
+gui_marker_move -id  Wave.1 C1 98
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 78
+gui_close_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_expand -id Hier.1   top
+gui_list_action -id  Hier.1 top
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
+gui_list_select -id Data.1 -selected  { {top.u0.din_ad[18:0]}   }
+gui_list_create_group_when_add -wave -disable
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.din_ad[18:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 37
+gui_marker_move -id  Wave.1 C1 105
+gui_marker_move -id  Wave.1 C1 95
+gui_marker_move -id  Wave.1 C1 105
+gui_marker_move -id  Wave.1 C1 97
+gui_marker_move -id  Wave.1 C1 95
+gui_marker_move -id  Wave.1 C1 86
+gui_marker_move -id  Wave.1 C1 83
+gui_marker_move -id  Wave.1 C1 85
+gui_marker_move -id  Wave.1 C1 95
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 67
+gui_marker_move -id  Wave.1 C1 101
+gui_marker_move -id  Wave.1 C1 96
+gui_marker_move -id  Wave.1 C1 106
+gui_marker_move -id  Wave.1 C1 105
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Data.1 -selected  { V2:top.rst  V2:top.clk  V2:top.i_en  V2:top.o_en  {V2:top.din[15:0]}  {V2:top.dout[15:0]}  {V2:top.result[19:0]}   }
+gui_list_create_group_when_add -wave -enable
+gui_list_add -id Wave.1 -from Data.1 { V2:top.rst V2:top.clk V2:top.i_en V2:top.o_en {V2:top.din[15:0]} {V2:top.dout[15:0]} {V2:top.result[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 31
+gui_marker_move -id  Wave.1 C1 215
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 314
+gui_marker_move -id  Wave.1 C1 315
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 28220626
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 6630147
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 510011
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 85178
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 154533430
+gui_marker_move -id  Wave.1 C1 25971531
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 2338285
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 2362064
+gui_wv_scroll_hslidermove -id  Wave.1 2377917
+gui_wv_scroll_hslidermove -id  Wave.1 2409622
+gui_wv_scroll_hslidermove -id  Wave.1 2391127
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 25873889
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 2430759
+gui_wv_scroll_hslidermove -id  Wave.1 2438686
+gui_wv_scroll_hslidermove -id  Wave.1 2433401
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 2417549
+gui_wv_scroll_hslidermove -id  Wave.1 2414907
+gui_wv_scroll_hslidermove -id  Wave.1 2406980
+gui_wv_scroll_hslidermove -id  Wave.1 2401696
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 26011981
+gui_marker_move -id  Wave.1 C1 26010015
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 159236486
+gui_wv_scroll_hslidermove -id  Wave.1 168831073
+gui_wv_scroll_hslidermove -id  Wave.1 183812096
+gui_wv_scroll_hslidermove -id  Wave.1 181455530
+gui_wv_scroll_hslidermove -id  Wave.1 180445574
+gui_wv_scroll_hslidermove -id  Wave.1 168662747
+gui_wv_scroll_hslidermove -id  Wave.1 168662747
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 168494421
+gui_marker_move -id  Wave.1 C1 28600071
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 28610995
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 28611015
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 28610995
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 28610914
+gui_wv_scroll_hslidermove -id  Wave.1 348095099
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 327561399
+gui_marker_move -id  Wave.1 C1 28714218
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 28610440
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 28611005
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 28610954
+gui_list_select -id Wave.1 -selected  { {V1:top.result[19:0]}   }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28611044
+gui_list_select -id Wave.1 -selected  { {V2:top.result[19:0]}   }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 13
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 374
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 78888287
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28544219
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 2484003
+gui_wv_scroll_hslidermove -id  Wave.1 2456868
+gui_marker_move -id  Wave.1 C1 28606001
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28611005
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28610812
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 28611005
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 28611021
+gui_marker_move -id  Wave.1 C1 28611102
+gui_marker_move -id  Wave.1 C1 28611005
+gui_marker_move -id  Wave.1 C1 28611125
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 28611126
+gui_marker_move -id  Wave.1 C1 28611100
+gui_marker_move -id  Wave.1 C1 28611019
+gui_marker_move -id  Wave.1 C1 28611005
+gui_wv_zoom_timerange -id  Wave.1 28610921 28611225
+gui_close_db -file /home/khk1262/test/mem_test3.vpd -design V2
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_expand -id Hier.1   top
+gui_list_action -id  Hier.1 top
+gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
+gui_list_expand -id Hier.1   top.u0
+gui_list_action -id  Hier.1 top.u0
+gui_list_select -id Data.1 -selected  { top.u0.wen   }
+gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn   }
+gui_list_add -id Wave.1 -from Data.1 { top.u0.wen top.u0.csn } -insertionbar
+gui_marker_move -id  Wave.1 C1 28610993
+gui_marker_move -id  Wave.1 C1 28611007
+gui_marker_move -id  Wave.1 C1 28610996
+gui_marker_move -id  Wave.1 C1 28611009
+gui_marker_move -id  Wave.1 C1 28610995
+gui_marker_move -id  Wave.1 C1 28610999
+gui_marker_move -id  Wave.1 C1 28610995
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 118175016
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_marker_move -id  Wave.1 C1 21544395
+gui_wv_scroll_hslidermove -id  Wave.1 144146357
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 146206871
+gui_wv_scroll_hslidermove -id  Wave.1 146206871
+gui_zoom -window  Wave.1  -full
+gui_marker_move -id  Wave.1 C1 16298827
+gui_marker_move -id  Wave.1 C1 16012044
+gui_wv_zoom_timerange -id  Wave.1 20743961 20935150
+gui_marker_move -id  Wave.1 C1 20927596
+gui_marker_move -id  Wave.1 C1 20931710
+gui_wv_zoom_timerange -id  Wave.1 20933881 20935138
+gui_wv_scroll_hslidermove -id  Wave.1 35474545
+gui_save_session -reload -default_file
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
+gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
+gui_wv_scroll_hslidermove -id  Wave.1 38002804
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 38125130
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_marker_move -id  Wave.1 C1 28611015
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2

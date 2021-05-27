@@ -1,0 +1,71 @@
+---------------------------------------------
+
+The tool has just exited abnormally:
+
+
+Release = 'N-2017.12-SP2-13'  Architecture = 'linux'  Program = 'DVE'
+
+'163037579 163076713 163078792 7376391 173319097 -172743108 -172853144 -172856614 173538490 174162686'
+
+---------------------------------------------
+=======================DVE Context and Call Stack=========================
+Command line: /tools/Synopsys/VCS-2017.12-SP2-13/gui/dve/linux/bin/dve.exe
+
+--- Stack trace follows:
+[New LWP 13206]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0xf7727430 in __kernel_vsyscall ()
+
+Thread 2 (Thread 0xf54e2b70 (LWP 13206)):
+#0  0xf7727430 in __kernel_vsyscall ()
+#1  0x0087e824 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0x0a59c355 in ?? ()
+#3  0x0a59c7f0 in QThread::msleep(unsigned long) ()
+#4  0x08cdb80a in ag::dveXThread::run() ()
+#5  0x0a59c4f0 in QThreadInstance::start(void*) ()
+#6  0x0087abc9 in start_thread () from /lib/libpthread.so.0
+#7  0x007be11e in clone () from /lib/libc.so.6
+
+Thread 1 (Thread 0xf5a767e0 (LWP 12999)):
+#0  0xf7727430 in __kernel_vsyscall ()
+#1  0x0077c69b in waitpid () from /lib/libc.so.6
+#2  0x00715be3 in do_system () from /lib/libc.so.6
+#3  0x00715f72 in system () from /lib/libc.so.6
+#4  0x008829ed in system () from /lib/libpthread.so.0
+#5  0xf720ddc0 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#6  0xf720e3a6 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#7  0xf720f46d in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#8  0xf720799d in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#9  0x09b85a10 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
+#10 0x09b86288 in ?? ()
+#11 0x00708e07 in exit () from /lib/libc.so.6
+#12 0x0a54a3b9 in ?? ()
+#13 0xf5b43eb7 in _XIOError () from /usr/lib/libX11.so.6
+#14 0xf5b4263c in _XReply () from /usr/lib/libX11.so.6
+#15 0xf5b27868 in XGetWindowProperty () from /usr/lib/libX11.so.6
+#16 0xf5b26ada in XGetWMHints () from /usr/lib/libX11.so.6
+#17 0x0a57fcba in QWidget::setIcon(QPixmap const&) ()
+#18 0x0a6182fe in QWidget::polish() ()
+#19 0x0a69153c in QListBox::doLayout() const ()
+#20 0x0a69a09c in QListBox::resizeEvent(QResizeEvent*) ()
+#21 0x0a619f7d in QWidget::event(QEvent*) ()
+#22 0x0a5a287a in QApplication::internalNotify(QObject*, QEvent*) ()
+#23 0x0a5a2baa in QApplication::notify(QObject*, QEvent*) ()
+#24 0x09bf81d6 in EkExtQtApp::notify(QObject*, QEvent*) ()
+#25 0x09bc831e in ag::baseQtApp::notify(QObject*, QEvent*) ()
+#26 0x0a5a37f9 in QApplication::sendPostedEvents(QObject*, int) ()
+#27 0x0a5a398c in QApplication::sendPostedEvents() ()
+#28 0x0a566c59 in QEventLoop::processEvents(unsigned int) ()
+#29 0x08d1e87b in ag::ovaEventLoop::processEvents(unsigned int) ()
+#30 0x0a5b304b in QEventLoop::enterLoop() ()
+#31 0x0a5b2fe2 in QEventLoop::exec() ()
+#32 0x08d1e22d in run_cci_event_loop ()
+#33 0x08cdd578 in ag::ovaAppInst::enterEventLoop(int, char**) ()
+#34 0x0891068c in main ()
+
+Process VmPeak: 133856 kb, VmSize: 132972 kb
+System Free Memory: 6933052 kb, System Free Swap: 65486496 kb
+
+No context available
+==========================================================================
