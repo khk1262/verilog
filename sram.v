@@ -12,7 +12,7 @@ module sram(clk, csn, wen, a, din, dout, store);
 	reg[`address:0] a_reg;
 
 	initial begin
-		$readmemh("img.dat", data);
+		$readmemh("img_hex.dat", data);
 	end
 
 	always@(posedge clk) begin
@@ -21,7 +21,7 @@ module sram(clk, csn, wen, a, din, dout, store);
 			a_reg<=a;
 		end
 		if(store == 1'b1)
-			$writememh("img2.dat", data);
+			$writememh("img2_hex.dat", data);
 	end
 	assign dout = data[a_reg];
 endmodule

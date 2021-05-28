@@ -3,7 +3,7 @@ gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_typ
 
 # State setting overrides
 gui_state_default_create -off -ini
-gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/khk1262/test/con_test.vpd -design V1} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V3} {gui_open_db -file /home/khk1262/test/con_test.vpd -design V2} {gui_open_db -file /home/khk1262/test/con_test.vpd -design V3}}
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/khk1262/verilog/con_test.vpd -design V1} {gui_open_db -file /home/khk1262/test/con_test.vpd -design V1} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V2} {gui_open_db -file /home/khk1262/test/mem_test3.vpd -design V3} {gui_open_db -file /home/khk1262/test/con_test.vpd -design V2}}
 gui_set_state_value -category Layout -key child_console_size_x -value 1318
 gui_set_state_value -category Layout -key child_console_size_y -value 147
 gui_set_state_value -category Layout -key child_data_coltype -value 55
@@ -54,201 +54,63 @@ gui_state_default_create -off
 
 # Begin command logging
 gui_open_db -file /home/khk1262/verilog/con_test.vpd -design V1
+gui_list_select -id Data.1 -selected  { top.rst   }
 gui_list_select -id Data.1 -selected  { top.rst  top.clk  top.i_en  top.o_en  {top.result[19:0]}   }
 gui_open_window Wave
 gui_list_add -id Wave.1 -from Data.1 { top.rst top.clk top.i_en top.o_en {top.result[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 142
+gui_list_select -id Data.1 -selected  { {top.result[19:0]}   }
 gui_list_expand -id  Hier.1   top
-gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  {  }
 gui_list_select -id Hier.1 -current_item_name top.u0 -current_item_type Scope  -selected  { top.u0   }
-gui_list_select -id Data.1 -selected  { top.u0.wen   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn  top.u0.i_en  {top.u0.din[15:0]}   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn  top.u0.i_en  {top.u0.din[15:0]}  {top.u0.dout[15:0]}   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn  top.u0.i_en  {top.u0.din[15:0]}  {top.u0.dout[15:0]}  {top.u0.ad[18:0]}   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn  top.u0.i_en  {top.u0.din[15:0]}  {top.u0.dout[15:0]}  {top.u0.ad[18:0]}  {top.u0.x[8:0]}   }
-gui_list_select -id Data.1 -selected  { top.u0.wen  top.u0.csn  top.u0.i_en  {top.u0.din[15:0]}  {top.u0.dout[15:0]}  {top.u0.ad[18:0]}  {top.u0.x[8:0]}  {top.u0.y[8:0]}   }
-gui_list_create_group_when_add -list -enable
-gui_list_add -id Wave.1 -from Data.1 { top.u0.wen top.u0.csn top.u0.i_en {top.u0.din[15:0]} {top.u0.dout[15:0]} {top.u0.x[8:0]} {top.u0.y[8:0]} {top.u0.ad[18:0]} } -insertionbar
-gui_marker_move -id  Wave.1 C1 385
-gui_wv_scroll_hslidermove -id  Wave.1 85805323
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scrollright -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 85989257
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_marker_move -id  Wave.1 C1 28611005
+gui_list_select -id Data.1 -selected  { {top.u0.x[8:0]}   }
+gui_sim_watch { -file  $::env(PWD)/con_test_bench.v  -line  26  }
+gui_list_select -id Data.1 -selected  { {top.u0.sum[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.temp_flip[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.sum[19:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.sum[19:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 178
 gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
+gui_wv_zoom_timerange -id  Wave.1 88 93
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 2
 gui_zoom -window Wave.1 -factor 2
 gui_scroll -window Wave.1 -hrel -.2
 gui_scroll -window Wave.1 -hrel -.2
 gui_scroll -window Wave.1 -hrel -.2
-gui_list_select -id Wave.1 -selected  { top.u0.wen   }
-gui_list_select -id Wave.1 -selected  { top.u0.csn   }
-gui_list_select -id Wave.1 -selected  { top.u0.wen   }
-gui_list_select -id Wave.1 -selected  { {top.u0.din[15:0]}   }
-gui_marker_move -id  Wave.1 C1 28611015
-gui_marker_move -id  Wave.1 C1 28611005
-gui_marker_move -id  Wave.1 C1 28610995
-gui_marker_move -id  Wave.1 C1 28611005
-gui_marker_move -id  Wave.1 C1 28611111
-gui_save_session -reload -default_file
-gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
-gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}
-gui_list_select -id Data.1 -selected  { top.u0.store   }
-gui_list_add -id Wave.1 -from Data.1 { top.u0.store } -insertionbar
-gui_list_select -id Wave.1 -selected  { top.u0.wen   }
-gui_list_select -id Wave.1 -selected  { top.u0.csn   }
-gui_list_select -id Wave.1 -selected  { {New Group}   }
-gui_list_select -id Wave.1 -selected  { top.u0.store   }
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_list_select -id Data.1 -selected  { {top.u0.sum_flip[19:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.sum_flip[19:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {top.u0.sum_flip[19:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {top.u0.sum[19:0]}   }
+gui_list_select -id Data.1 -selected  { {top.u0.temp_sum[18:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.temp_sum[18:0]} } -insertionbar
+gui_list_select -id Data.1 -selected  { {top.u0.dout[15:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {top.u0.dout[15:0]} } -insertionbar
 gui_save_session -reload -default_file
 gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {false}
 gui_set_pref_value -category {Globals} -key {use_mhpi_lookup} -value {true}

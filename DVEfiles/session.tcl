@@ -1,15 +1,15 @@
 # Begin_DVE_Session_Save_Info
 # DVE reload session
-# Saved on Fri May 28 01:45:15 2021
+# Saved on Fri May 28 14:37:53 2021
 # Designs open: 1
 #   V1: /home/khk1262/verilog/con_test.vpd
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: top
-#   Wave.1: 14 signals
+#   Wave.1: 8 signals
 #   Group count = 1
-#   Group Group1 signal count = 14
+#   Group Group1 signal count = 8
 # End_DVE_Session_Save_Info
 
 # DVE version: N-2017.12-SP2-13
@@ -96,15 +96,14 @@ gui_set_time_units 1s
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {top.u0}
 gui_load_child_values {top}
 
 
-set _session_group_2 Group1
-gui_sg_create "$_session_group_2"
-set Group1 "$_session_group_2"
+set _session_group_1 Group1
+gui_sg_create "$_session_group_1"
+set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_2" { top.rst top.clk top.i_en top.o_en top.result top.u0.wen top.u0.csn top.u0.i_en top.u0.din top.u0.dout top.u0.x top.u0.y top.u0.ad top.u0.store }
+gui_sg_addsignal -group "$_session_group_1" { top.rst top.clk top.i_en top.o_en top.result top.u0.sum top.u0.temp_sum top.u0.dout }
 
 # Global: Highlighting
 
@@ -114,14 +113,13 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 28611111
+gui_set_time -C1_only 178
 
 
 
 # Save global setting...
 
 # Wave/List view global setting
-gui_list_create_group_when_add -list -enable
 gui_cov_show_value -switch false
 
 # Close all empty TopLevel windows
@@ -149,8 +147,8 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {top.u0}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top.u0.store }}
-gui_view_scroll -id ${Data.1} -vertical -set 43
+catch { gui_list_select -id ${Data.1} {top.u0.dout }}
+gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
@@ -170,9 +168,9 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 28610799 28611080
+gui_wv_zoom_timerange -id ${Wave.1} 0 273
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
-gui_list_select -id ${Wave.1} {top.u0.store }
+gui_list_select -id ${Wave.1} {top.u0.sum }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -190,7 +188,7 @@ gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Wave.1} -text {*}
 gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
 
-gui_marker_move -id ${Wave.1} {C1} 28611111
+gui_marker_move -id ${Wave.1} {C1} 178
 gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
