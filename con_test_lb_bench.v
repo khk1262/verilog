@@ -9,7 +9,7 @@ module top;
 	reg[18:0] r_ad;
 	reg[15:0] r_data[0:262144];
 	reg[18:0] w_ad;
-	reg[15:0] w_data[0:260100];
+	reg[7:0] w_data[0:260099];
 	reg[5:0] cycle;
 
 

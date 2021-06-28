@@ -25,7 +25,6 @@ module con_test_lb(rst, clk, din, i_en, o_en, result, done);
 	reg[3:0] count;
 	reg state; 
 	reg w_state;
-	reg[2:0] f_cnt;
 
 	wire[10:0] ad;
 
@@ -39,12 +38,11 @@ module con_test_lb(rst, clk, din, i_en, o_en, result, done);
 	reg [10:0] r_cnt; // rPtr cnt
 	reg [10:0] t_cnt; // total cnt
 
-	
 	reg [2:0] row;
 	reg [2:0] col;
 
 	assign ad = (count == 4'b0000) ? w_ptr : r_ptr_temp;
-	assign c_r_en = (state == 1 && count == 4'b1010) ? 1'b1 : 1'b0;
+	assign c_r_en = (state == 1 && count == 4'b1010 && r_cnt < 510) ? 1'b1 : 1'b0;
 
 	always@(*) begin
 		if(count == 4'b0001) sum = 0;
@@ -87,7 +85,6 @@ module con_test_lb(rst, clk, din, i_en, o_en, result, done);
 			state <= 1'b0;
 			w_state <= 1'b0;
 			result <= 1'b0;
-			f_cnt <= 1'b0;		
 
 			sum <= 1'b0;
 			sum_flip <= 1'b0;
@@ -124,16 +121,8 @@ module con_test_lb(rst, clk, din, i_en, o_en, result, done);
 				w_state <= 1'b0;
 			end		
 				
-
-
-			if(state == 0 || f_cnt != 'b0) count <= 0;
-			
-			if(state == 1 && f_cnt != 'b0) begin
-				count <= 0;
-				if(w_state == 1'b1) f_cnt <= f_cnt - 1;	
-			end
-
-			else if(state == 1 && f_cnt == 'b0) begin
+			if(state == 0) count <= 0;
+			else begin
 				if(t_cnt == 509 && r_cnt == 509 && count == 4'b1011) begin
 					state <= 1'b0;
 					done <= 1'b1;
@@ -144,23 +133,17 @@ module con_test_lb(rst, clk, din, i_en, o_en, result, done);
 					if(count == 4'b1011) begin
 						if(i_en == 1'b1) count <= 4'b0000;
 						else count <= 4'b1100;
-					end
-					else if(count != 4'b1100)  count <= count + 1;
-				
-					if(count == 4'b1011) begin
-						if(r_cnt == 509) begin
-							if(r_ptr + 3 > 1026) r_ptr <= r_ptr + 3 - 1027;
-							else r_ptr <= r_ptr + 3;
+
+						if(r_ptr+1>1026) r_ptr <= r_ptr + 1 - 1027;
+						else r_ptr <= r_ptr+1;
+
+						if(r_cnt == 511) begin
 							r_cnt <= 0;
 							t_cnt <= t_cnt + 1;
-							f_cnt <= 3'b011;
 						end
-						else begin
-							if(r_ptr +1 > 1026) r_ptr <= r_ptr + 1 - 1027;
-							else r_ptr <= r_ptr + 1;
-							r_cnt <= r_cnt +1;
-						end
+						else r_cnt <= r_cnt +1;
 					end
+					else if(count != 4'b1100)  count <= count + 1;
 				end
 			end
 		
