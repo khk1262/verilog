@@ -1,12 +1,11 @@
 `define memory 524288
 `define address 18	
 
-module sram(clk, csn, wen, a, din, dout, store);
+module sram(clk, csn, wen, a, din, dout);
 	input clk, csn, wen;
 	input [`address:0] a;
 	input [15:0] din;
 	output [15:0] dout;
-	input store;
 
 	reg[15:0] data[0:`memory];
 	reg[`address:0] a_reg;
@@ -20,8 +19,6 @@ module sram(clk, csn, wen, a, din, dout, store);
 			if(wen==1'b1) data[a] <= din;
 			a_reg<=a;
 		end
-		if(store == 1'b1)
-			$writememh("img2_hex.dat", data);
 	end
 	assign dout = data[a_reg];
 endmodule

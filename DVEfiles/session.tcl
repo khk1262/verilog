@@ -1,15 +1,16 @@
 # Begin_DVE_Session_Save_Info
 # DVE reload session
-# Saved on Fri May 28 14:37:53 2021
+# Saved on Mon Jun 28 18:41:39 2021
 # Designs open: 1
-#   V1: /home/khk1262/verilog/con_test.vpd
+#   V1: /home/khk1262/verilog/con_test_lb.vpd
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: top
-#   Wave.1: 8 signals
-#   Group count = 1
-#   Group Group1 signal count = 8
+#   Wave.1: 29 signals
+#   Group count = 2
+#   Group Group1 signal count = 7
+#   Group Group2 signal count = 22
 # End_DVE_Session_Save_Info
 
 # DVE version: N-2017.12-SP2-13
@@ -66,7 +67,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 694} {child_wave_right 1692} {child_wave_colname 345} {child_wave_colvalue 345} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 324} {child_wave_right 1446} {child_wave_colname 161} {child_wave_colvalue 159} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -77,8 +78,8 @@ gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {d
 
 # DVE Open design session: 
 
-if { ![gui_is_db_opened -db {/home/khk1262/verilog/con_test.vpd}] } {
-	gui_open_db -design V1 -file /home/khk1262/verilog/con_test.vpd -nosource
+if { ![gui_is_db_opened -db {/home/khk1262/verilog/con_test_lb.vpd}] } {
+	gui_open_db -design V1 -file /home/khk1262/verilog/con_test_lb.vpd -nosource
 }
 gui_set_precision 1s
 gui_set_time_units 1s
@@ -96,14 +97,33 @@ gui_set_time_units 1s
 # Global: Signal Compare
 
 # Global: Signal Groups
+gui_load_child_values {top.u0}
 gui_load_child_values {top}
 
 
-set _session_group_1 Group1
-gui_sg_create "$_session_group_1"
-set Group1 "$_session_group_1"
+set _session_group_27 Group1
+gui_sg_create "$_session_group_27"
+set Group1 "$_session_group_27"
 
-gui_sg_addsignal -group "$_session_group_1" { top.rst top.clk top.i_en top.o_en top.result top.u0.sum top.u0.temp_sum top.u0.dout }
+gui_sg_addsignal -group "$_session_group_27" { top.rst top.clk top.i_en top.din top.done top.o_en top.result }
+
+set _session_group_28 Group2
+gui_sg_create "$_session_group_28"
+set Group2 "$_session_group_28"
+
+gui_sg_addsignal -group "$_session_group_28" { top.u0.wen top.u0.csn top.u0.din top.u0.temp_din top.u0.i_en top.u0.done top.u0.o_en top.u0.dout top.u0.result top.u0.c_r_en top.u0.count top.u0.state top.u0.w_state top.u0.ad top.u0.w_ptr top.u0.temp_flip top.u0.r_ptr top.u0.r_ptr_temp top.u0.r_cnt top.u0.t_cnt top.u0.row top.u0.col }
+gui_set_radix -radix {decimal} -signals {V1:top.u0.ad}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.ad}
+gui_set_radix -radix {decimal} -signals {V1:top.u0.w_ptr}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.w_ptr}
+gui_set_radix -radix {decimal} -signals {V1:top.u0.r_ptr}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.r_ptr}
+gui_set_radix -radix {decimal} -signals {V1:top.u0.r_ptr_temp}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.r_ptr_temp}
+gui_set_radix -radix {decimal} -signals {V1:top.u0.r_cnt}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.r_cnt}
+gui_set_radix -radix {decimal} -signals {V1:top.u0.t_cnt}
+gui_set_radix -radix {unsigned} -signals {V1:top.u0.t_cnt}
 
 # Global: Highlighting
 
@@ -113,7 +133,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 178
+gui_set_time -C1_only 384385
 
 
 
@@ -147,7 +167,7 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {top.u0}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top.u0.dout }}
+catch { gui_list_select -id ${Data.1} {top.u0.temp_flip }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -156,7 +176,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active top /home/khk1262/verilog/con_test_bench.v
+gui_open_source -id ${Source.1}  -replace -active top /home/khk1262/verilog/con_test_lb_bench.v
 gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 
@@ -168,10 +188,11 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 273
+gui_wv_zoom_timerange -id ${Wave.1} 384333 384605
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
-gui_list_select -id ${Wave.1} {top.u0.sum }
-gui_seek_criteria -id ${Wave.1} {Any Edge}
+gui_list_add_group -id ${Wave.1} -after {New Group} {Group2}
+gui_list_select -id ${Wave.1} {top.u0.c_r_en }
+gui_seek_criteria -id ${Wave.1} {Value...}
 
 
 
@@ -186,10 +207,10 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group2  -item {top.u0.temp_flip[19:0]} -position below
 
-gui_marker_move -id ${Wave.1} {C1} 178
-gui_view_scroll -id ${Wave.1} -vertical -set 0
+gui_marker_move -id ${Wave.1} {C1} 384385
+gui_view_scroll -id ${Wave.1} -vertical -set 75
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
