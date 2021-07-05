@@ -2,52 +2,48 @@
 Command line: /tools/Synopsys/VCS-2017.12-SP2-13/gui/dve/linux/bin/dve.exe
 
 --- Stack trace follows:
-[New LWP 11340]
+[New LWP 12923]
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib64/libthread_db.so.1".
-0xf77b1430 in __kernel_vsyscall ()
+0xf776c430 in __kernel_vsyscall ()
 
-Thread 2 (Thread 0xf55acb70 (LWP 11340)):
-#0  0xf77b1430 in __kernel_vsyscall ()
+Thread 2 (Thread 0xf5567b70 (LWP 12923)):
+#0  0xf776c430 in __kernel_vsyscall ()
 #1  0x0087e43c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
-#2  0xf5bb9725 in ?? () from /usr/lib/libX11.so.6
-#3  0xf5bb9091 in ?? () from /usr/lib/libX11.so.6
-#4  0xf5bb9870 in ?? () from /usr/lib/libX11.so.6
-#5  0xf5baca57 in XFreeFont () from /usr/lib/libX11.so.6
-#6  0x0a8823b0 in QFontEngineXLFD::~QFontEngineXLFD() ()
-#7  0x0a88249e in QFontEngineXLFD::~QFontEngineXLFD() ()
-#8  0x0a8824eb in QFontEngineLatinXLFD::~QFontEngineLatinXLFD() ()
-#9  0x0a8825ae in QFontEngineLatinXLFD::~QFontEngineLatinXLFD() ()
-#10 0x0a5b9050 in QFontCache::~QFontCache() ()
-#11 0x0a5b92ce in QFontCache::~QFontCache() ()
-#12 0x0a5b9ebd in QSingleCleanupHandler<QFontCache>::~QSingleCleanupHandler() ()
-#13 0x00708e2f in exit () from /lib/libc.so.6
-#14 0x0a54a3b9 in ?? ()
-#15 0xf5bcdeb7 in _XIOError () from /usr/lib/libX11.so.6
-#16 0xf5bccaff in _XEventsQueued () from /usr/lib/libX11.so.6
-#17 0xf5ba71b2 in XCheckTypedEvent () from /usr/lib/libX11.so.6
-#18 0x08cdb7c0 in ag::dveXThread::run() ()
-#19 0x0a59c4f0 in QThreadInstance::start(void*) ()
-#20 0x0087abc9 in start_thread () from /lib/libpthread.so.0
-#21 0x007be11e in clone () from /lib/libc.so.6
+#2  0xf5b74725 in ?? () from /usr/lib/libX11.so.6
+#3  0xf5b74091 in ?? () from /usr/lib/libX11.so.6
+#4  0xf5b74870 in ?? () from /usr/lib/libX11.so.6
+#5  0xf5b696a6 in XFreeCursor () from /usr/lib/libX11.so.6
+#6  0x0a560cdd in QCursorData::~QCursorData() ()
+#7  0x0a56118c in QCursor::~QCursor() ()
+#8  0x0a5611cc in ?? ()
+#9  0x00708e2f in exit () from /lib/libc.so.6
+#10 0x0a54a3b9 in ?? ()
+#11 0xf5b88eb7 in _XIOError () from /usr/lib/libX11.so.6
+#12 0xf5b87aff in _XEventsQueued () from /usr/lib/libX11.so.6
+#13 0xf5b621b2 in XCheckTypedEvent () from /usr/lib/libX11.so.6
+#14 0x08cdb7c0 in ag::dveXThread::run() ()
+#15 0x0a59c4f0 in QThreadInstance::start(void*) ()
+#16 0x0087abc9 in start_thread () from /lib/libpthread.so.0
+#17 0x007be11e in clone () from /lib/libc.so.6
 
-Thread 1 (Thread 0xf5b007e0 (LWP 11124)):
-#0  0xf77b1430 in __kernel_vsyscall ()
+Thread 1 (Thread 0xf5abb7e0 (LWP 12706)):
+#0  0xf776c430 in __kernel_vsyscall ()
 #1  0x0077c69b in waitpid () from /lib/libc.so.6
 #2  0x00715be3 in do_system () from /lib/libc.so.6
 #3  0x00715f72 in system () from /lib/libc.so.6
 #4  0x008829ed in system () from /lib/libpthread.so.0
-#5  0xf7297dc0 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
-#6  0xf72983a6 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
-#7  0xf729946d in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
-#8  0xf729199d in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#5  0xf7252dc0 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#6  0xf72533a6 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#7  0xf725446d in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
+#8  0xf724c99d in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /tools/Synopsys/VCS-2017.12-SP2-13/linux/lib/liberrorinf.so
 #9  0x09b85a10 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
 #10 0x09b86288 in ?? ()
 #11 0x00708e07 in exit () from /lib/libc.so.6
 #12 0x0a54a3b9 in ?? ()
-#13 0xf5bcdeb7 in _XIOError () from /usr/lib/libX11.so.6
-#14 0xf5bccaff in _XEventsQueued () from /usr/lib/libX11.so.6
-#15 0xf5bbcd48 in XPending () from /usr/lib/libX11.so.6
+#13 0xf5b88eb7 in _XIOError () from /usr/lib/libX11.so.6
+#14 0xf5b87aff in _XEventsQueued () from /usr/lib/libX11.so.6
+#15 0xf5b77d48 in XPending () from /usr/lib/libX11.so.6
 #16 0x0a566c7d in QEventLoop::processEvents(unsigned int) ()
 #17 0x08d1e87b in ag::ovaEventLoop::processEvents(unsigned int) ()
 #18 0x0a5b304b in QEventLoop::enterLoop() ()
@@ -56,8 +52,8 @@ Thread 1 (Thread 0xf5b007e0 (LWP 11124)):
 #21 0x08cdd578 in ag::ovaAppInst::enterEventLoop(int, char**) ()
 #22 0x0891068c in main ()
 
-Process VmPeak: 256960 kb, VmSize: 236720 kb
-System Free Memory: 495540 kb, System Free Swap: 65486384 kb
+Process VmPeak: 761592 kb, VmSize: 745204 kb
+System Free Memory: 2374840 kb, System Free Swap: 65488232 kb
 
 No context available
 ==========================================================================
